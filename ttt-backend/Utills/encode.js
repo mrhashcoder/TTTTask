@@ -13,4 +13,5 @@ const encode = function(string){
     return res;
 }
 
-console.log(encode("aaabbcdccccd"));
+
+module.exports = encode

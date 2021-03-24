@@ -4,8 +4,7 @@ const encode = require('../Utills/encode');
 
 exports.postEncode = async( req ,res ) => {
     try {
-        const input = req.body.input;
-        
+        const input = String(req.body.input);
         const output = encode(input);
 
         return res.status(200).json({
@@ -13,7 +12,7 @@ exports.postEncode = async( req ,res ) => {
             message : "Done"
         });
     }catch(err){
-        console.log("Server Side Error!!");
+        console.log("Server Side Error!! : " + err);
         return res.status(500).json({
             message : "Server Side Error"
         });
@@ -23,7 +22,7 @@ exports.postEncode = async( req ,res ) => {
 
 exports.postDecode = async( req ,res ) => {
     try{
-        const input = req.body.input;
+        const input = String(req.body.input);
 
         const output = decode(input);
 
@@ -32,7 +31,7 @@ exports.postDecode = async( req ,res ) => {
             message : "Done"
         })
     }catch(err){
-        console.log("Server Side Error!!");
+        console.log("Server Side Error!! : " + err);
         return res.status(500).json({
             message : "Server Side Error!!"
         });

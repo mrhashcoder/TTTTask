@@ -9,3 +9,6 @@ router.get('/' , controller.getHome);
 // Post Routes
 router.post('/encode' , controller.postEncode);
 router.post('/decode' , controller.postDecode)
+
+
+module.exports = router

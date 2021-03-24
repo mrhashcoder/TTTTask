@@ -16,4 +16,4 @@ const decode = function(string){
     return res;
 } 
 
-export default decode;
+module.exports = decode;
