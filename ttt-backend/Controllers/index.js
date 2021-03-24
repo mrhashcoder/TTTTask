@@ -10,7 +10,7 @@ exports.postEncode = async( req ,res ) => {
 
         return res.status(200).json({
             output : output,
-            message : "done"
+            message : "Done"
         });
     }catch(err){
         console.log("Server Side Error!!");
@@ -23,7 +23,14 @@ exports.postEncode = async( req ,res ) => {
 
 exports.postDecode = async( req ,res ) => {
     try{
+        const input = req.body.input;
 
+        const output = decode(input);
+
+        return res.status(200).json({
+            output : output,
+            message : "Done"
+        })
     }catch(err){
         console.log("Server Side Error!!");
         return res.status(500).json({
@@ -33,5 +40,16 @@ exports.postDecode = async( req ,res ) => {
 }
 
 exports.getHome = async( req , res ) => {
-
+    try{
+        console.log("TTT Welcome!!1");
+        
+        return res.status(200).json({
+            message : "Welcome TTT"
+        });
+    }catch(err){
+        console.log("Server Side Error!!");
+        return res.status(500).json({
+            message : "Server Side Error"
+        });
+    }
 }
