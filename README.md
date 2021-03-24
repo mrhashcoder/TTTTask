@@ -47,5 +47,9 @@ String Encription-Decryption React-Node Web App
       3. used Express Framework for create node application
       4. I used Heroku to deploy this express app because api deployed over firebase wasn't responding due to some reasons
 #### Test-Case & Result
+ 1. AAAABBBBCCCCEEDD    =>    A4B4C3E2D2
+ 2. hhhheeehhhqqqq      =>    h4e3h3q4
+ 3. helllllooooworllldddd =>  hel4o4worl3d4
+####
 
 <img src = "https://res.cloudinary.com/mrhashcoder/image/upload/v1616613002/pjimage_j4t0wa.jpg" />
