@@ -4,6 +4,10 @@ const decode = function(string){
       let char = string[i];
       let count = 0;
       i++;
+      if(isNaN(string[i]) == true){
+        res += char;
+        continue;
+      }
       while(i<string.length && parseInt(string[i])>=1 && parseInt(string[i])<=9){
         count = parseInt(count * 10) + parseInt(string[i]);
         i++;

@@ -8,7 +8,11 @@ const encode = function(string){
           count++;
           i++;
         }
-        res += char + count;
+        if(count == 1){
+          res += char
+        }else{
+          res += char + count;
+        }
     }
     return res;
 }

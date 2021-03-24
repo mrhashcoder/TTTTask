@@ -21,6 +21,7 @@ const route = require('./Routes/index');
 // Using Routes
 app.use(route);
 
+// Starting Server
 
 const server = app.listen(PORT , () => {
     console.log("Server Started at : "+ PORT);
