@@ -3,6 +3,7 @@ import React from 'react'
 function InputBox(props) {
     const value = props.data;
     const setValue = props.setData;
+    const placeholder = props.placeholder
 
     return (
         <div className="input-Box">
@@ -19,6 +20,7 @@ function InputBox(props) {
                 onChange = {(e) => {
                     setValue(e.target.value)
                 }}
+                placeholder={placeholder}
             />
         </div>
     )

@@ -1,8 +1,8 @@
 const request = {
-    'postEncrypt' : '/encode',
-    'postDecrypt' : '/decode',
+    postEncrypt : '/encode',
+    postDecrypt : '/decode',
 
-    'getHome' : '/'
+    getHome : '/'
 }
 
 export default request

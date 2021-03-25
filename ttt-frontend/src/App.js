@@ -9,37 +9,30 @@ import requests from './axios/axiosReq'
 
 
 function App() {
-  const [encryptStr , setEncryptStr] = useState("");
-  const [decryptStr , setDecryptStr] = useState("");
-  const [isLoading , setIsLoading] = useState(false)
+  const [inputStr , setInputStr] = useState("");
+  const [outputStr , setOutputStr] = useState("");
 
   const handleEncryption = async() => {
-    setIsLoading(true)
     axios.post(requests.postEncrypt , {
-      input : encryptStr
+      input : inputStr
     }).then((res) => {
       const output = res.data.output;
-      setDecryptStr(output);
-      setIsLoading(false)
+      setOutputStr(output);
     }).catch(err => {
       console.log(err)
-      setDecryptStr("Server Side Error");
-      setIsLoading(false)
+      setOutputStr("Server Side Error");
     })
   }
 
   const handleDecryption = async() => {
-    setIsLoading(true)
     axios.post(requests.postDecrypt , {
-      input : decryptStr
+      input : inputStr
     }).then((res) => {
       const output = res.data.output
-      setEncryptStr(output)
-      setIsLoading(false)
+      setOutputStr(output)
     }).catch(err => {
       console.log(err);
-      setEncryptStr("Server Side Error");
-      setIsLoading(false);
+      setOutputStr("Server Side Error");
     })
   }
 
@@ -48,19 +41,21 @@ function App() {
       <h1>Welcome TTT - Task</h1>
       
       <div className="container mx-auto system-box mt-5"> 
-        <div className="encode-box mx-auto">
+        <div className="encode-box mx-auto m-1 border-white card-body">
           <button className="btn btn-primary run-btn btn-lg" onClick= {handleEncryption} >Encrypt  </button>
+          <button className="btn btn-primary run-btn btn-lg" onClick = {handleDecryption}>Decrypt  </button>
           <InputBox  
-            data = {encryptStr}
-            setData = {setEncryptStr}
+            data = {inputStr}
+            setData = {setInputStr}
+            placeholder = {"Input Here"}
           />
         </div>
         
         <div className="decode-box mx-auto">
-          <button className="btn btn-primary run-btn btn-lg" onClick = {handleDecryption} >Decrypt</button>
           <InputBox 
-            data = {decryptStr}
-            setData = {setDecryptStr}
+            data = {outputStr}
+            setData = {setOutputStr}
+            placeholder={"Output Here"}
           />
         </div>
       </div>

@@ -26,15 +26,16 @@
   border: black;
   height: auto;
   padding-bottom: 10vh;
+  margin-top: 11vh;
 }
 
 
 .encode-box{
   width: 40vh;
   flex-grow: 1;
-  border: blue;
   height: auto;
   padding-bottom: 3vh ;
+  layoutOrigin: 0.5 0.5;
 }
 
 .run-btn {
