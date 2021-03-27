@@ -8,7 +8,8 @@ String Encription-Decryption React-Node Web App
             # Res = 1 * pow(26 , 0) + 2 * pow(26 , 1) + 3 * pow(26 , 2) + 5 * pow(26 , 3)
       4. Then Recived Value will be converted to 62 base system
       5. and then we return the output
-      6. to see the code visit ttt-backend => utils =>  newDeocde.js | newEncode.js 
+      6. To Handle The so big values I'm Using big-integer library
+      7. to see the code visit ttt-backend => utils =>  newDeocde.js | newEncode.js 
       
             
 ##### You can see code for algo at ttt-backend => utills => encode.js | decode.js
