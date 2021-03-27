@@ -2,21 +2,15 @@
 String Encription-Decryption React-Node Web App
 
 ## String Encription AlgoRithm :
-      1. Basically as we are using only small case Alphbets i found out that each char can be represented using only 5 bits
-      2. but we usually use 8 bits to represent any charecter and from here i got idea for encryption
-      3. Here is what I am doing. I created a dictionary for small case alphabets each represented by a 5 bits unique binary string
-      4. and chaged the whole input String to a binary string using that dictionary. Assume no of chars in string  = n
-      5. now we have binary string of size n * 5. now assuming 6 consucative bits represent a charecter
-      6. and using another dictionary having 64 keys we can convert this hashed string to another small string
-      7. Using Same logic we can do reverse Encoding
-      8. visit files => ttt-backend => uttils => encode.js | decode.js to view dictionaries and algorithm code
-
-###### Algorithm Capacity
-      Each 6 charecter string will be converted to a 5 charecter string
-      so Compression Percentage => 5 / 6 * 100 => 83%      
+      1. Updated Algorithm is working on base system
+      2. as input Set have 26 charecters and ouput set have 62 charecter we are just chaging value of base of input
+      3. firstly convert input to 10 base system using this formula if number is 1235
+            # Res = 1 * pow(26 , 0) + 2 * pow(26 , 1) + 3 * pow(26 , 2) + 5 * pow(26 , 3)
+      4. Then Recived Value will be converted to 62 base system
+      5. and then we return the output
+      6. to see the code visit ttt-backend => utils =>  newDeocde.js | newEncode.js 
       
-
-
+            
 ##### You can see code for algo at ttt-backend => utills => encode.js | decode.js
 
 ## Deployment 
